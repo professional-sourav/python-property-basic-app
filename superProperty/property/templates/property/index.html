@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>List of all properties</p>
+<a href="{% url 'add_new' %}">Add New Property</a> |
+<a href="{% url 'listing' %}">Listing</a>
+<ul>
+{% for property in properties %}
+    <li>{{ property.title }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
